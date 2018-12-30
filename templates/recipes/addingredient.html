@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+<!DOCTYPE html>
+{% block content %}
+    <h2>Add Ingridient to Recipe</h2><br>
+    <form method="post">{% csrf_token %}
+      {{form.as_p}}
+      <br>
+      <button type="submit" name="button" class="btn btn-lg btn-terceary">Add</button>
+    </form>
+{% endblock %}

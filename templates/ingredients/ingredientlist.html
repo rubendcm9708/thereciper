@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+<!DOCTYPE html>
+{% block content %}
+<h2>Ingredients List</h2><br>
+    <table border="1">
+      <thead>
+        <th>Article Number</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+      </thead>
+      <tbody>
+        {% for a in ingredients %}
+        <tr>
+          <td>{{a.id}}</td>
+          <td>{{a.name}}</td>
+          <td>{{a.quantity}} {{a.measure}}</td>
+          <td>€{{a.price}}</td>
+          <td><a href="{% url 'ingredients_app:editingredient' a.id %}">Edit</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <p class="lead">
+    <a href="ingredients/add" class="btn btn-lg btn-terceary">Add Ingredient</a>
+    </p>
+{% endblock %}

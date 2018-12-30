@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+<!DOCTYPE html>
+{% block content %}
+    <h2>Recipes</h2><br>
+    <table border="1">
+      <thead>
+        <th>Recipe Number</th>
+        <th>Name</th>
+      </thead>
+      <tbody>
+        {% for a in recipes %}
+        <tr>
+          <td>{{a.id}}</td>
+          <td>{{a.name}}</td>
+          <td><a href="{% url 'recipes_app:ingredients-recipe' a.id %}">Cost</a>&nbsp<a href="{% url 'recipes_app:editrecipe' a.id %}">Edit</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="lead"><br>
+    <a href="/recipes/add" class="btn btn-lg btn-terceary">Add Recipe</a>
+    </p>
+{% endblock %}
