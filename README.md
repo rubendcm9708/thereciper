@@ -8,7 +8,7 @@ This is a project developed in Django for an internship selection process.
 * Bootstrap  
 * SQLite3
 
-After cloning or downloading the project, open the UNIX terminal or Windows CMD, go to the
+After cloning or downloading the project that is in the Develop branch, open the UNIX terminal or Windows CMD, go to the
 project directory and run the following:
 
 ```
